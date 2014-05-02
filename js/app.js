@@ -38,4 +38,8 @@ var persons = [
 		name: 'Marcus Sabadello',
 		link: 'http://box.projectdanube.org/',
 	},
+	{
+		name: 'Daniel Janz',
+		link: 'http://jaensen.github.io/',
+	},
 ];

@@ -64,8 +64,22 @@ header li:hover {
 	color: #294257;
 }
 
+.avatar {
+	width: 100%;
+	margin: 0 auto;
+	height: 200px;
+}
+
+.avatar img {
+	position: absolute;
+	top: 4%;
+	left: 15%;
+	width: 150px;
+	border-radius: 100px;
+}
+
 nav {
-	width: 250px;
+	width: 220px;
 	height: 100%;
 	position: fixed;
 	left: 0;
@@ -75,9 +89,14 @@ nav {
 
 #content {
 	position: fixed;
-	left: 250px;
+	left: 220px;
 	top: 2rem;
 	right: 0;
 	bottom: 0;
 	padding: 1rem;
+	background: #fefefe;
+}
+
+aside {
+
 }
