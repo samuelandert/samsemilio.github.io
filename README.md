@@ -1,10 +1,10 @@
-Public ID from Samuel Andert
-
-See here: samsemilio.github.io
+##What is this?
+Public ID from Samuel Andert:  
+samsemilio.github.io
 
 You want your own? Follow the description here:
-Linked Profiles
 
+##Linked Profiles
 1. visit http://pages.github.com
 create repository for your personal page eg. http://elf-pavlik.github.io/
 create repository for one of your organizations eg. http://ouisharelabs.github.io/
@@ -22,4 +22,5 @@ http://www.eurail.com/eurail-passes/global-pass
 
 6. ??? ;) http://wiki.goodrelations-vocabulary.org/Cookbook/Seeks
 
-
+##HowTo Ember.js
+http://emberjs.com/guides/
