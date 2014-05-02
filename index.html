@@ -16,7 +16,7 @@
 			<nav>
 				<ul>
 					<li>{{#link-to 'overview'}}Overview{{/link-to}}</li>
-					<li>{{#link-to 'connections'}}Connections{{/link-to}}</li>
+					<li>{{#link-to 'persons'}}Persons{{/link-to}}</li>
 				</ul>
 			</nav>
 				{{outlet}}
@@ -35,18 +35,18 @@
 			</ul>
 		</script>
 
-		<script type="text/x-handlebars" id="connections">
-
+		<script type="text/x-handlebars" id="persons">
 			<ul>
-
-				<li><a property="knows" href="http://elf-pavlik.wwelves.org/">Pavlik Elf</a></li>
-				<li><a property="knows" href="http://auli.haldjas.org/">Auli Haldjas</a></li>
-				<li><a property="knows" href="http://profile.daha.co.uk">Daniel Harris</a></li>
-				<li><a property="knows" href="http://alvarosaco.github.io">Álvaro Saco</a></li>
-				<li><a property="knows" href="http://y.chn.io/">Jon Richter</a></li>
-				<li><a property="knows" href="http://box.projectdanube.org/">Markus Sabadello</a></li>
+			{{#each}}
+				<li property="knows">{{#link-to 'person' this}}{{name}}{{/link-to}}</li>
+			{{/each}}
 			</ul>
+			{{outlet}}
+		</script>
 
+		<script type="text/x-handlebars" id="person">
+			{{name}}
+			{{link}}
 		</script>
 
 	</div>
