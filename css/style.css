@@ -37,13 +37,12 @@ body {
 header {
 	position: fixed;
 	top: 0;
+	left: 3rem;
 	background: #f7f7f7;
-	border-right: 1px solid rgba(0,0,0,0.05);
 	overflow: hidden;
 	font-size: 1rem;
 	line-height: 0.1em;
 	width: 100%;
-	padding: 0 0.1rem;
 	height: 2rem;
 	border-bottom: 1px solid rgba(0,0,0,0.05);
 	font-weight: 700;
@@ -51,7 +50,6 @@ header {
 
 header li{
   	display: inline;
-  	padding: 0 0.1rem;
 	color: rgba(0, 128, 128, .6);
 }
 
@@ -78,25 +76,64 @@ header li:hover {
 	border-radius: 100px;
 }
 
-nav {
-	width: 220px;
+
+aside {
+	width: 15rem;
 	height: 100%;
 	position: fixed;
-	left: 0;
+	right: 0rem;
 	top: 2rem;
 	border-right: 1px solid rgba(0,0,0,0.05);
 }
 
 #content {
 	position: fixed;
-	left: 220px;
+	left: 0;
 	top: 2rem;
-	right: 0;
+	right: 15rem;
 	bottom: 0;
-	padding: 1rem;
 	background: #fefefe;
 }
 
-aside {
-
+h2 {
+	margin: 0;
+	width: 100%;
+	padding: 1.5rem 3rem;
+	background: lightgrey;
+	font-weight: 300;
+	text-align: center;
 }
+
+.grid {
+	width: 97%;
+	padding: 2rem;
+}
+
+.grid.element {
+	float: left;
+	padding-right: 6px;
+	width: 33.3%;
+}
+
+.grid.element img {
+	width: 100%;
+	height: auto;
+}
+
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) {
+		.grid.element {width: 20%;}
+}
+
+/* Big screens (1024px) */
+@media (min-width: 64rem) {
+	.grid.element {width: 16.6%;}
+}
+
+/* Large screens (1600px) */
+@media (min-width: 1600px) {
+	.grid.element {width: 14.3%;}
+}
+
+

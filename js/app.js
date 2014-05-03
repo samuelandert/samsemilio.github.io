@@ -10,7 +10,7 @@ App.Router.map(function () {
 App.PersonsRoute = Ember.Route.extend({
 	model: function() {
 		return persons;
-	}
+	},
 });
 
 var persons = [

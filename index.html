@@ -9,6 +9,7 @@
 <body vocab="http://schema.org/">
 	<!-- Define that the following content is a person -->
 	<div typeof="Person">
+
 		<header>
 			<ul>
 				<li property="name">Samuel Andert</li>
@@ -16,17 +17,17 @@
 		</header>
 
 		<script type="text/x-handlebars">
-			<nav>
+			<aside>
 
 				<div class="avatar">
-					<img property="image" src="img/sam.png" />
+					<img property="image" src="public/img/sam.png" />
 				</div>
 
 				<ul>
 					<li>{{#link-to 'overview'}}Overview{{/link-to}}</li>
 					<li>{{#link-to 'persons'}}Persons{{/link-to}}</li>
 				</ul>
-			</nav>
+			</aside>
 				{{outlet}}
 		</script>
 
@@ -36,33 +37,36 @@
 				<h2 property="description">Constantly creating ideas, passion for open source, design and technology, interested in permaculture and in love with avocado and olive oil</h2>
 
 				<ul>
-				  <li><a property="sameAs" href="https://github.com/samsemilio">github</a></li>
-				  <li><a property="sameAs" href="https://twitter.com/samsemilio">twitter</a></li>
-				  <li><a property="sameAs" href="https://plus.google.com/+SamuelAndert">google+</a></li>
-				  <li><a property="sameAs" href="https://facebook.com/samuelandert">facebook</a></li>
+					<li><a href="https://github.com/samsemilio">Github</a></li>
+					<li><a href="https://facebook.com/samuelandert">Facebook</a></li>
+					<li><a href="https://twitter.com/samsemilio">Twitter</a></li>
+					<li><a href="https://plus.google.com/+SamuelAndert">Google+</a></li>
 				</ul>
+
 			</div>
 		</script>
 
 		<script type="text/x-handlebars" id="persons">
 
 			<div id="content">
-				<ul>
-					Persons I know
-					{{#each}}
-						<li property="knows">{{#link-to 'person' this}}{{name}}{{/link-to}}</li>
-					{{/each}}
-					</ul>
+					<h2>Persons I know</h2>
+					<div class="grid" >
+						{{#each}}
+							<div class="grid element" property="knows">{{#link-to 'person' this}}<img property="image" src="public/img/profileImg.png" width="100%"/>{{name}}{{/link-to}}</div>
+						{{/each}}
+					</div>
 					{{outlet}}
-				</script>
-
-				<script type="text/x-handlebars" id="person">
-					{{name}}
-					{{link}}
-				</script>
 			</div>
 
-		</div>
+		</script>
+
+		<script type="text/x-handlebars" id="person">
+
+			<div id="content">
+				{{name}} {{link}}
+			</div>
+
+		</script>
 
 	</div>
 
